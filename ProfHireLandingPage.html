@@ -1,0 +1,490 @@
+<div id="page">
+  <style> 
+  * {
+    position: relative;
+  }
+  .frame { 
+    list-style-type:none;
+    margin: auto;
+    position: static;
+  }
+  .frame > li {
+    float: left;
+    width: 25%;
+  }
+  svg {
+    width: 98%;
+    height: 100%;
+  }
+  .applicationCombo {
+    position: relative;
+    left: 9%;
+    padding-top: .8rem;
+    z-index: 5;
+  }
+  #staticApplication {
+    animation: slidein 3s forwards ;
+    animation-delay: 10s;
+    opacity: 0;
+  }
+  #application {
+    -webkit-animation: sendit 3s backwards ;
+      animation: sendit 3s backwards ;
+    -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+      position: absolute;
+      width: 45%;
+      top: 7%;
+      left: 40%;
+      z-index:10;
+      margin: 0 auto;
+      visibility: hidden;
+  }
+
+  .profhire-logo {
+      position: relative;
+      left: 70%;
+      width: 55%;
+      margin-top: 4%;
+      display: inline-block;
+      float: left;
+    }
+  .institution {
+      position: relative;
+      right: 40%;
+      width: 130%;
+      z-index: 10;
+    }
+  .lines {
+      position: relative;
+      left: 5%;
+      z-index: 100;
+  }
+  .path {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    animation: dash 3s linear infinite;
+    animation-delay: 6.5s;
+    animation-iteration-count: 1;
+    visibility: hidden;
+  }
+  .greenButton {
+    background-color: #5ed5a5;
+    border-radius: 8px;
+    width: 25rem;
+    height: 8rem;
+    margin: 2% auto;
+    position: relative; 
+  }
+  .buttonText {
+      font-size: 1.7rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+      display: inline-block;
+      margin:  8% 9%;            
+      top: 50%;                         
+  }
+
+  .perks {
+    line-height:3rem;
+    font-weight: 500;
+    text-align: center;
+    list-style: none;
+  }
+.landingpage-col {
+    float: left; 
+    width: 25.33333333%; 
+    height: 100%; 
+    z-index: 1000;
+  }
+.landingpage-col-padding {
+    width: 10%;
+  }
+.landingpage-col-one {
+    width: 25.33333333%; 
+  }
+.landingpage-col-two {
+    width: 29.33333333%; 
+  }
+.landingpage-col-three {
+      height: 100%;                                                 
+}
+/*----------media query---------*/
+@media screen and (max-width: 436px) {
+  @-ms-viewport {
+    width: 360px;
+  }
+.profhire-logo {
+    position: relative;
+    left: 55%;
+    width: 70%;
+    margin-top: -3%;
+    display: inline-block;
+    float: left;
+  }
+
+.applicationCombo {
+  position: relative;
+  left: 3%;
+  padding-top: .2rem;
+  z-index: 5;
+}
+.frame  {  
+  padding-top: 18px;
+}
+.pi-section-w.pi-section-blue .pi-section {
+  padding-bottom: 15px;
+}
+.perks {
+  line-height:2rem;
+  font-weight: 400;
+  font-size: 1.13rem;
+  text-align: center;
+  list-style: none;
+  padding-right: 1%;
+}
+.headline {
+  font-size: 2.6rem;
+}
+.subHead {
+  font-size: 1.6rem;
+}
+.bottomHead {
+    font-size: 1.2rem;
+    padding-top: 13px;
+    margin-bottom: 5px;
+}
+.pi-section-blue h3 {
+     margin-bottom: 10px; 
+}
+.greenButton {
+   height: 6rem; 
+   margin-top: 2rem;
+   margin-bottom: 10px;
+}
+.buttonText {
+    transform: translate(0, -25%);
+}
+}
+.pi-section-w.pi-section-blue .pi-section {
+    padding-bottom: 30px;}
+/*--------------animations----------------*/
+@-webkit-keyframes dash {
+  from {
+   visibility: visible;
+    stroke-dashoffset: 100;
+  }
+  to {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  from {
+   visibility: visible;
+    stroke-dashoffset: 100;
+  }
+  to {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes sendit {
+  0% {
+   visibility: visible;
+    left:40%;
+    opacity: 1;
+    transform:rotate(0deg);
+  }
+  40% {
+    opacity: 1;
+    top: 30%;
+    -webkit-transform: rotateZ(30deg) rotateY(50deg) scale(.6);
+  }
+  100% {
+    left:130%;
+    opacity: 1;
+    -webkit-transform:skew(10deg, 10deg)  scale(.2) ;
+  }
+}
+
+@keyframes sendit {
+  0% {
+   visibility: visible;
+    left:40%;
+    opacity: 1;
+    transform:rotate(0deg);
+  }
+  40% {
+    opacity: 1;
+    top: 30%;
+    transform: rotateZ(30deg) rotateY(50deg) scale(.6);
+  }
+  100% {
+    left:130%;
+    opacity: 1;
+    transform:skew(10deg, 10deg)  scale(.2) ;
+  }
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes slidein {
+    0% {
+     opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    0% {
+     opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="profhire.css">
+    <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+    <div class="pi-section-w pi-section-blue">
+        <div class="pi-texture" style="background-color: #69a4d8"></div>
+        <div class="pi-section frame">
+            <div class="pi-text-center">
+                <h1 class="pi-weight-700 pi-uppercase pi-letter-spacing headline">MULTIPLE OPPORTUNITIES<br>
+                ONE APPLICATION
+                </h1>
+                <div class="pi-row pi-row-centered">
+                    <div class="pi-col-md-9 pi-col-centered">
+                        <h3 class="pi-weight-500 pi-text-italics pi-letter-spacing pi-text-center subHead">
+                            <em>We connect your profile to multiple universities and colleges 
+                                looking for your unique qualifications -- at no charge to you</em>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Row -->
+<!--            <a href="#" data-toggle="tooltip" title="Click on the icon for more information">-->
+                <div class="pi-row pi-grid-big-margins pi-row-centered">
+                <!-- Col 3 -->
+                
+                <ul class="frame">
+		    <li class="applicationCombo ">    
+                        <a href="#" data-toggle="tooltip" title="Click on the icon for more information" >                                                            
+                            <div  >                            
+                                <svg  width="500px" height="300px" viewBox="-15 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+                                    <desc>Created with Sketch.</desc>
+                                    <defs></defs>
+                                    <g transform="translate(24.000000, 8.000000)">
+                                        <path class="greenoval" d="M54,108 C83.8233765,108 108,83.8233765 108,54 C108,24.1766235 83.8233765,0 54,0 C24.1766235,0 0,24.1766235 0,54 C0,83.8233765 24.1766235,108 54,108 Z" id="oval" fill="#5FD9A8"></path>
+                                    </g>
+                                        <g id="staticApplication" stroke="none" stroke-width="1" fill="gold" fill-rule="evenodd" transform="translate(24.000000, 8.000000)">
+                                        <rect id="paper" fill="#FFFFFF" x="25" y="16" width="57" height="77"></rect>
+                                        <g class="writing" transform="translate(32.388889, 29.275862)" stroke="#BEBEBE" stroke-linecap="square">
+                                            <path d="M0.744543651,10.0896552 L11.6645172,10.0896552" id="Line" stroke-width="2"></path>
+                                            <path d="M0.744543651,12.2137931 L9.67906746,12.2137931" id="Line" stroke-width="2"></path>
+                                            <path d="M0.744543651,14.337931 L11.1681548,14.337931" id="Line" stroke-width="2"></path>
+                                            <path d="M31.0226521,0.531034483 L41.4462632,0.531034483" id="Line" stroke-width="2"></path>
+                                            <path d="M32.5117394,2.65517241 L41.4462632,2.65517241" id="Line" stroke-width="2"></path>
+                                            <path d="M32.5117394,4.77931034 L41.4462632,4.77931034" id="Line" stroke-width="2"></path>
+                                            <path d="M0.496362434,20.4448276 L42.7185847,20.4448276" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,23.6310345 L42.4704034,23.6310345" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,26.8172414 L42.4704034,26.8172414" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,30.0034483 L42.4704034,30.0034483" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,33.1896552 L42.4704034,33.1896552" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,36.3758621 L42.4704034,36.3758621" id="Line" stroke-width="3"></path>
+                                            <path d="M0.248181217,39.562069 L42.4704034,39.562069" id="Line" stroke-width="3"></path>
+                                            <path d="M27.9816468,46.7310345 L40.3907077,46.7310345" id="Line" stroke-width="2"></path>
+                                            <path d="M28.9743717,49.3862069 L40.3907077,49.3862069" id="Line" stroke-width="2"></path>
+                                        </g>
+                                        </g>
+                                </svg>
+                                <svg id="application" width="120px" height="150px" viewBox="174 399 95 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                                    <defs></defs>
+                                    <g id="page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(168.000000, 379.000000)">
+                                        <rect id="paper" fill="#FFFFFF" x="25" y="16" width="57" height="77"></rect>
+                                        <g id="writing" transform="translate(32.388889, 29.275862)" stroke="#BEBEBE" stroke-linecap="square">
+                                              <path d="M0.744543651,10.0896552 L11.6645172,10.0896552" id="Line" stroke-width="2"></path>
+                                              <path d="M0.744543651,12.2137931 L9.67906746,12.2137931" id="Line" stroke-width="2"></path>
+                                              <path d="M0.744543651,14.337931 L11.1681548,14.337931" id="Line" stroke-width="2"></path>
+                                              <path d="M31.0226521,0.531034483 L41.4462632,0.531034483" id="Line" stroke-width="2"></path>
+                                              <path d="M32.5117394,2.65517241 L41.4462632,2.65517241" id="Line" stroke-width="2"></path>
+                                              <path d="M32.5117394,4.77931034 L41.4462632,4.77931034" id="Line" stroke-width="2"></path>
+                                              <path d="M0.496362434,20.4448276 L42.7185847,20.4448276" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,23.6310345 L42.4704034,23.6310345" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,26.8172414 L42.4704034,26.8172414" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,30.0034483 L42.4704034,30.0034483" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,33.1896552 L42.4704034,33.1896552" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,36.3758621 L42.4704034,36.3758621" id="Line" stroke-width="3"></path>
+                                              <path d="M0.248181217,39.562069 L42.4704034,39.562069" id="Line" stroke-width="3"></path>
+                                              <path d="M27.9816468,46.7310345 L40.3907077,46.7310345" id="Line" stroke-width="2"></path>
+                                              <path d="M28.9743717,49.3862069 L40.3907077,49.3862069" id="Line" stroke-width="2"></path>
+                                        </g>  
+                                    </g>
+                                </svg>                                
+                            </div>    
+                        </a>
+                    </li>
+              			<li class="center" >
+                      <a href="#" data-toggle="tooltip" title="Click on the icon for more information" >
+				                <img src="img/profhirewhite.png" alt="ProfHire Logo"  class="profhire-logo" data-toggle="modal" data-target="#modalLogo">
+                      </a>    
+			               </li>
+			               <li class="lines " >
+                      <svg width="234px" height="152px" viewBox="480 383 234 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                          <path class="path" d="M481,431 L600,431" id="Path-100" stroke="#FFFFFF" stroke-width="3" fill="none"></path>
+                          <path class="path" d="M480,431 C480,431 559,395 588,387 C593,385 652,384 696,385" id="Path-101" stroke="#FFFFFF" stroke-width="3" fill="none"></path>
+                          <path class="path"  d="M481,433 C481,433 508,446 597,481 C604,484 655,481 709,477" id="Path-102" stroke="#FFFFFF" stroke-width="3" fill="none"></path>
+                      </svg>                        
+			               </li>	
+                    <li class="schools" >                            
+                        <a href="#" data-toggle="tooltip" title="Click on the icon for more information">
+                          <img src="img/schools.png" alt="schools, universities and colleges" class="institution " >
+                        </a>
+                    </li>
+                </ul>
+                <!-- End col 3 -->
+                
+                <div style="position: absolute; top: 0; right: 0;bottom: 0; left: 0; ">
+                    <div style=" text-align: center; height: 100%;">
+                        <div style=" height: 100%;">                        
+                            <div class="landingpage-col landingpage-col-padding"></div>                            
+                            <a class="landingpage-col landingpage-col-one" href="#" data-toggle="tooltip" title="Click on the icon for more information">
+                                <div class="landingpage-col-three" data-toggle="modal" data-target="#modalProf"></div>
+                            </a>
+                            <a class="landingpage-col landingpage-col-two" href="#" data-toggle="tooltip" title="Click on the icon for more information">
+                                <div class="landingpage-col-three" data-toggle="modal" data-target="#modalLogo"></div>
+                            </a>
+                            <a class="landingpage-col" href="#" data-toggle="tooltip" title="Click on the icon for more information" >
+                                <div class="landingpage-col-three" data-toggle="modal" data-target="#modalLogo"></div>
+                            </a>
+                            <div class="landingpage-col landingpage-col-padding"></div>
+                        </div>
+                    </div> 
+                     <!-- modal --> 
+                    <div class="modal fade" id="modalProf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">-Create your profile-</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Fill in our questionnaire and upload your paperwork.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn pi-btn pi-btn-base" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- modal --> 
+                            <div class="modal fade" id="modalLogo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">-We confirm your info-</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>
+                                                ProfHire will verify your credentials and references and connect you to the schools currently looking for your skills.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn pi-btn pi-btn-base" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <!-- modal --> 
+                            <div class="modal fade" id="modalSchools" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">-We connect you with a school-</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>
+                                               ProfHire then presents you to a school looking to fill a position that requires your qualifications.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn pi-btn pi-btn-base" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                </div>
+            <h5 class=" pi-letter-spacing pi-weight-500 pi-text-center bottomHead">By completing your ProfHire profile, you could be
+                considered for any number of potential openings <br>-- not just the job opening that led you here. 
+                We're much more than a job board.</h5>
+            <!-- End row -->
+        </div>
+       
+    </div>
+    <!-- - - - - - - - - - END SECTION - - - - - - - - - -->
+  <div class="greenButton">
+      <p>  
+        <a href="login/signup"  class="buttonText">Create your profile<br> now</a>
+      </p>
+  </div>
+    <!-- - - - - - - - - - SECTION video - - - - - - - - - -->
+    <div class="pi-section-w pi-section-gray pi-border-top">
+        <div class="pi-section pi-padding-bottom-20">
+            <!-- Row -->
+            <div class="pi-row pi-row-centered">
+                <!-- Col 6 -->
+                    <div class="col-sm-12 col-centered video-wrapper" style="padding:0;">
+                        <div class="pi-text-center">
+                            <h4 class="pi-weight-700 pi-uppercase pi-has-border pi-has-base-border pi-has-tall-border pi-has-short-border pi-letter-spacing">
+                                Watch our video to learn more
+                            </h4>
+                            <div class="pi-row">
+                                <div class="col-sm-2 col-centered">
+                                  
+                                </div>
+                                <div class="col-sm-8 col-centered" style="padding-bottom: 20px;" >
+                                    <div class="embed-responsive embed-responsive-16by9" >                                     
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kv0ubl0b5Xg?rel=0" frameborder="0" allowfullscreen></iframe>
+                                </div>  
+                                    </div>
+                                    <div class="col-sm-2 col-centered">
+                                    </div>
+                            </div>
+                        </div>
+                    </div
+                </div>
+            </div>
+            <div class="pi-text-center">
+                <h4 class="pi-weight-500 pi-uppercase pi-padding-top-40 blue-text pi-letter-spacing ">
+                    <ul class="perks">
+                         <li>• apply once and let us do the rest</li>
+                        <li>• we verify your qualifications</li>
+                        <li>• your information stays secure</li>
+                    </ul>
+                </h4>
+            </div>
+        <script >
+            $(function() {
+                console.log("addign popover 5");
+                   $('[data-toggle="tooltip"]').tooltip();             
+            });
+            
+        </script>
+    </div>
+ </div>
